@@ -53,16 +53,18 @@ body{
 }
 /* code for the right side*/
 .right-section{
-padding: 90px 0;
 max-height: 100vh;
+display:flex;
+align-items: center;
+justify-content: center;
 }
-.right-section > p:nth-child(-n + 2){
+
+.right-section .represent-as-single-item > p:nth-child(-n + 2){
     font-size:20px;
     font-weight: 550;
     width: 65%;
     color:rgba(0, 0, 0, 0.855);
-    margin-bottom: 20px;
-    margin-left: 30px;
+    margin-bottom: 30px;
 
 
 }
@@ -154,7 +156,7 @@ button[type='submit']:hover{
     .right-section{
         padding:0 0;
     }
-    .right-section > p:nth-child(-n + 2){
+    .right-section .represent-as-single-item > p:nth-child(-n + 2){
         width:100%;
         margin-left: 0px;
         padding-left: 10px;
@@ -164,7 +166,7 @@ button[type='submit']:hover{
         margin-top: 10px;
     }
     form{
-        max-width: 59vw;
+        max-width: 60vw;
         padding:3px;
     }
     .input-container{
@@ -189,8 +191,12 @@ button[type='submit']:hover{
         margin-bottom: 10px;
     }
 }
-@media only screen and (max-width:900px){
-    .right-section > p:nth-child(-n + 2){
-        width: 100%;
+
+@media only screen and (max-height:550px) {
+    .right-section .represent-as-single-item > p:nth-child(-n + 2){
+        font-size: 14px;
+    }
+    .represent-as-single-item{
+        padding-left: 10px;
     }
 }
