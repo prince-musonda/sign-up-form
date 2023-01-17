@@ -153,6 +153,16 @@ button[type='submit']:hover{
     .left-section{
         flex: 1 0 40vw;
     }
+    .logo-container{
+        top:35%;
+        font-size:35px;
+    }
+    .logo-container img{
+        width:40%;
+    }
+    .photo-credit{
+        font-size:10px;
+    }
     .right-section{
         padding:0 0;
     }
