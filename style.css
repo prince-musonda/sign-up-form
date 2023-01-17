@@ -1,0 +1,196 @@
+@font-face{
+    font-family:'Norse-Bold';
+    src:url('fonts/Norse-Bold.otf')
+
+}
+*{
+    margin:0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    display:flex;
+    height: 100vh;
+    font-family: Arial;
+}
+.left-section{
+    width:50%;
+    height: 100vh;
+    position:relative;
+    
+}
+.left-section > img{
+    width:100%;
+    height:100vh
+}
+.logo-container{
+    position:absolute;
+    top:20%;
+    color:white;
+    font-family: 'Norse-Bold';
+    background-color: rgba(0, 0, 0, 0.575);
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 40px;
+}
+.logo-container img{
+    width: 50px;
+}
+
+
+.photo-credit{
+    position:absolute;
+    width:100%;
+    bottom:20px;
+    color:white;
+    text-align: center;
+    font-size:14px;
+}
+.photo-credit a{
+    color:white;
+}
+/* code for the right side*/
+.right-section{
+padding: 90px 0;
+max-height: 100vh;
+}
+.right-section > p:nth-child(-n + 2){
+    font-size:20px;
+    font-weight: 550;
+    width: 65%;
+    color:rgba(0, 0, 0, 0.855);
+    margin-bottom: 20px;
+    margin-left: 30px;
+
+
+}
+
+form{
+box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.423);
+padding: 30px;
+color:rgba(0, 0, 0, 0.87);
+margin-bottom: 25px;
+
+}
+.input-container{
+    display:flex;
+    flex-flow:wrap;
+    column-gap: 10%;
+    row-gap: 20px;
+    padding-right: 70px;
+}
+
+
+form p{
+    display:flex;
+    flex-direction: column;
+    grid-template-rows: 2fr repeat(3,1fr);
+    width:40%;
+    flex: 1 0 40%;
+
+}
+form p label{
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.password-label{
+    font-size:13px;
+    
+}
+form input{
+    padding: 5px 10px;
+    border: 1px solid #d1d3d6;
+    border-radius: 5px;
+}
+form input:focus{
+    border: 1px solid rgb(0, 81, 255);;
+    outline:none;
+}
+.error{
+    border:1px solid red;
+}
+input[type='password'] + span{
+    font-size:small;
+    color:red;
+}
+.password-matches{
+    display:none;
+}
+button[type='submit']{
+    background: #596D48;
+    font-family: Arial;
+    padding:10px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    color:whitesmoke;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-left:30px;
+    
+}
+button[type='submit']:hover{
+    cursor:pointer;
+    scale: 1.1;
+}
+.already-have-account{
+    margin-left:30px
+}
+.already-have-account a{
+    color:#596D48;
+    text-decoration: none;
+    font-weight: 600;
+}
+.already-have-account a:hover{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width:600px){
+    .left-section{
+        flex: 1 0 40vw;
+    }
+    .right-section{
+        padding:0 0;
+    }
+    .right-section > p:nth-child(-n + 2){
+        width:100%;
+        margin-left: 0px;
+        padding-left: 10px;
+        font-size:13px;
+        white-space: wrap;
+        flex: 0 0 60vw;
+        margin-top: 10px;
+    }
+    form{
+        max-width: 59vw;
+        padding:3px;
+    }
+    .input-container{
+        flex-direction: column;
+        padding-left: 10px;
+    }
+    form p{
+        width:auto;
+    }
+    input{
+        width:100%;
+    }
+    button[type='submit']{
+        margin-left: 10px;
+        font-size: 13px;
+    }
+    .already-have-account{
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    form h2{
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (max-width:900px){
+    .right-section > p:nth-child(-n + 2){
+        width: 100%;
+    }
+}
